@@ -9,7 +9,7 @@ Welcome to the MLOps repository! This repository is dedicated to facilitating th
 - [Getting Started](#getting-started)
 - [Contributing](#contributing)
 - [License](#license)
-
+-
 ## About MLOps
 
 MLOps (Machine Learning Operations) is the practice of combining machine learning with DevOps principles to automate and streamline the end-to-end machine learning lifecycle. This repository serves as a central hub for MLOps-related projects, tools, and resources.
