@@ -1,5 +1,9 @@
 ### Medical Insurance Cost Prediction
 
+The following github repo describes about how to do medical insurance cost prediction and deploying our model using flask. 
+The dataset consists of demographic features of people. 
+Several models have been trained and the best model is used for prediction.
+Predictions are being deployed to predict a new buyer insurance cost based on their demographics.
 ### Software and Tools
 
 1. [Github Account] (https://github.com)
