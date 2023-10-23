@@ -1,41 +1,95 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>Medical Insurance</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h1, p {
+            margin: 0;
+            padding: 0;
+        }
 
-  
+        /* Use a background image */
+        body {
+            background-image: url('medical_insurance.jpeg'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif; /* Choose a professional font */
+            color: #333; /* Text color */
+            text-align: center;
+        }
+
+        /* Style the header */
+        h1 {
+            font-family: 'Havellac', ; /* Attractive font for the header */
+            font-size: 36px;
+            margin-top: 50px;
+        }
+
+        /* Style the main content */
+        .content {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        p {
+            font-family: 'Arimo', sans-serif; /* Choose a readable font for paragraphs */
+            font-size: 18px;
+        }
+
+        /* Style the input fields and button */
+        .input-container {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 300px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007BFF; /* Attractive button color */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker color on hover for interactivity */
+        }
+    </style>
 </head>
 
 <body>
- <div class="login">
-	<h1>Medical Cost Prediction</h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="age" placeholder="age" required="required" /><br>
-    	<input type="text" name="sex" placeholder="sex" required="required" /><br>
-        <input type="text" name="children" placeholder="children" required="required" /><br>
-        <input type="text" name="sex_encoded" placeholder="sex_encoded" required="required" /><br>
-        <input type="text" name="smoker_encoded" placeholder="smoker_encoded" required="required" /><br>
-        <input type="text" name="region_encoded" placeholder="region_encoded" required="required" /><br>
-
-       
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-
-   <br>
-   <br>
-  
-   
- </div>
- {{prediction_text}}
-
+    <h1>Medical Insurance</h1>
+    <div class="content">
+        <p>This is a Machine learning application for predicting Medical Insurance costs based on demographics.</p>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+            <div class="input-container">
+                <input type="text" name="age" placeholder="Age" required="required" /><br>
+                <input type="text" name="bmi" placeholder="BMI" required="required" /><br>
+                <input type="text" name="children" placeholder="Number of Children" required="required" /><br>
+                <input type="text" name="gender" placeholder="Gender (0 for female, 1 for male)" required="required" /><br>
+                <input type="text" name="smoker" placeholder="Smoker (0 for non-smoker, 1 for smoker)" required="required" /><br>
+                <input type="text" name="region" placeholder="Region (0 for NE, 1 for NW, 2 for SE, 3 for SW)" required="required" /><br>
+                <button type="submit">Predict</button>
+            </div>
+        </form>
+    </div>
+    {{ prediction_text }}
 </body>
+
 </html>
