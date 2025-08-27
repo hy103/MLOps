@@ -1,0 +1,19 @@
+# macOS system files
+.DS_Store
+**/.DS_Store
+
+# Data files
+*.csv
+*.pkl
+*.zip
+*.pdf
+
+# Study material folder
+Recommendation_systems/study_material/
+
+# Ignore deleted files
+README.md
+Reccomendation_systems/Deploying a recommender system on the cloud _ by Emilio Macias _ Medium.pdf
+Recommendation_systems/movie_recommendation_system/similarity.pkl
+Recommendation_systems/movie_recommendation_system/similarity.pkl.zip
+
